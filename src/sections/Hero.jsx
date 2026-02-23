@@ -38,7 +38,7 @@ const Hero = () => {
           {/* Grup Tombol Download CV */}
           <div className="flex gap-4 justify-center md:justify-start">
             
-            {/* Tombol CV Indonesia */}
+            {/* Tombol Unduh CV */}
             <div className="flex flex-col items-center gap-1.5">
               <a 
                 href="/CV_AhmadFachri.pdf" 
