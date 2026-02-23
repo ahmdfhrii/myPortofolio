@@ -45,7 +45,7 @@ const Hero = () => {
                 download
                 className="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 text-white text-sm font-semibold hover:bg-cyan/20 hover:border-cyan hover:text-cyan transition-all duration-300 backdrop-blur-sm drop-shadow-2xl text-center"
               >
-                {lang === 'id' ? 'Unduh' : 'Download CV'}
+                {lang === 'id' ? 'Unduh CV' : 'Download CV'}
               </a>
             </div>
           </div>
