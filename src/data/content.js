@@ -166,7 +166,7 @@ export const projectsData = [
     stack: ["ReactJS", "Tailwind", "Vite"],
     images: ["/assets/project/portofolio.png"],
     cover: "/assets/project/portofolio.png",
-    repo: "https://github.com/ahmadfachri/heartbeat-monitor",
+    repo: "https://github.com/ahmdfhrii/myPortofolio.git",
     glowColor: "cyan",
   },
   {
