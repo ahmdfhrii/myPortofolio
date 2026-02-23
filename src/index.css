@@ -1,0 +1,106 @@
+/* 1. IMPORT FONT (WAJIB PALING ATAS SEBELUM TAILWIND) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* 2. TAILWIND DIRECTIVES */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 3. BASE STYLES */
+body {
+  @apply bg-[#050507] text-white font-poppins overflow-x-hidden relative;
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0f10;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* 4. BACKGROUND ANIMATION (BLOBS) */
+body::before, body::after {
+  content: '';
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1;
+  opacity: 0.3;
+  animation: floatBlobs 10s infinite alternate ease-in-out;
+  pointer-events: none;
+}
+
+body::before {
+  top: -10%;
+  left: -10%;
+  background: radial-gradient(circle, #00f2fe, transparent 70%);
+}
+
+body::after {
+  bottom: -10%;
+  right: -10%;
+  background: radial-gradient(circle, #9b59b6, transparent 70%);
+  animation-delay: -5s;
+}
+
+@keyframes floatBlobs {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(40px, 30px) scale(1.2); }
+}
+
+/* 5. TEXT ANIMATION (SHINING EFFECT) */
+.shining-text {
+  background: linear-gradient(
+    60deg,
+    #ffffff 0%,   
+    #666 40%,  
+    #ffffff 50%,  
+    #666 60%,
+    #ffffff 100%  
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shineMove 3.5s linear infinite;
+}
+
+@keyframes shineMove {
+  to { background-position: 200% center; }
+}
+
+/* 6. SCROLL REVEAL ANIMATION */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+
+/* 7. FADE IN (UNTUK CHATBOT) */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
