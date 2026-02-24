@@ -66,8 +66,7 @@ export const aboutData = {
 // SKILLS / TOOLS DATA
 // =========================================================================
 export const skillsData = [
-  { name: "HTML", category: { id: "Bahasa", en: "Language" }, iconType: "font", icon: "fa-brands fa-html5", color: "#e34c26" },
-  { name: "CSS", category: { id: "Bahasa", en: "Language" }, iconType: "font", icon: "fa-brands fa-css3-alt", color: "#264de4" },
+  { name: "JavaScript", category: { id: "Bahasa", en: "Language" }, iconType: "font", icon: "fa-brands fa-js", color: "#F7DF1E" },
   { name: "Tailwind", category: { id: "CSS Framework", en: "CSS Framework" }, iconType: "image", img: "/assets/tools/tailwind.png" },
   { name: "Bootstrap", category: { id: "CSS Framework", en: "CSS Framework" }, iconType: "font", icon: "fa-brands fa-bootstrap", color: "#7952b3" },
   { name: "PHP", category: { id: "Bahasa", en: "Language" }, iconType: "font", icon: "fa-brands fa-php", color: "#777bb4" },
@@ -86,7 +85,7 @@ export const skillsData = [
   { name: "Prometheus", category: { id: "Pemantauan", en: "Monitoring" }, iconType: "image", img: "/assets/tools/prometheus.png" },
   { name: "Grafana", category: { id: "Pemantauan", en: "Monitoring" }, iconType: "image", img: "/assets/tools/grafana.png" },
   { name: "n8n", category: { id: "Otomatisasi", en: "Automation" }, iconType: "image", img: "/assets/tools/n8n.png" },
-  { name: "Figma", category: { id: "Desain", en: "Design" }, iconType: "image", img: "/assets/tools/figma.png" },
+  { name: "Kubernetes", category: { id: "Orkestrasi", en: "Orchestration" }, iconType: "image", img: "/assets/tools/kubernetes.png" }
 ];
 
 // =========================================================================
