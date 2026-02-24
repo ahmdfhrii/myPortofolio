@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const ChatbotPage = () => {
-  // Ambil bahasa dari localStorage (Sama seperti logika di Navbar)
   const lang = localStorage.getItem('selectedLang') || 'en';
 
   // ==========================================
@@ -17,7 +16,7 @@ const ChatbotPage = () => {
       badge: "Sedang dalam pengembangan berkelanjutan untuk fitur yang lebih baik",
       sessionTitle: "Sesi Obrolan Aktif",
       statusOnline: "Sistem Online",
-      placeholder: "Tanya sesuatu tentang AI atau Fachri...",
+      placeholder: "Tanya sesuatu tentang Fachri...",
       initialMessage: "Halo! Saya adalah Asisten AI virtual Fachri. Saya hadir di sini untuk membantu Anda menjelajahi portofolio ini. Silakan tanyakan apa saja seputar pengalaman, proyek, atau keahlian teknis Fachri. Ada yang ingin Anda ketahui hari ini?",
       errorMessage: "Maaf, koneksi ke server AI sedang terputus. Silakan coba lagi.",
       systemPrompt: `
@@ -32,11 +31,10 @@ KEAHLIAN FACHRI:
 - Docker
 - Kubernetes
 - CI/CD
-- Python (Flask)
+- Python
 - Prometheus & Grafana
 - Linux & Cloud Infrastructure
 - HTML
-- React
 - CSS
 - Tailwind
 - PHP
@@ -49,6 +47,8 @@ KEAHLIAN FACHRI:
 - Automation
 - n8n
 - Jenkins
+- ReactJS
+- Javascript
 
 PENGALAMAN:
 - MSIB DevOps di NF Academy
@@ -111,7 +111,7 @@ GAYA KOMUNIKASI:
       badge: "Currently under continuous development for better features",
       sessionTitle: "Active Chat Session",
       statusOnline: "System Online",
-      placeholder: "Ask something about AI or Fachri...",
+      placeholder: "Ask something about Fachri...",
       initialMessage: "Hello! I am Fachri's virtual AI Assistant. I am here to help you explore this portfolio. Feel free to ask me anything about Fachri's experiences, projects, or technical skills. What would you like to know today?",
       errorMessage: "Sorry, connection to the AI server is lost. Please try again.",
       systemPrompt: `
@@ -126,11 +126,10 @@ FACHRI'S SKILLS:
 - Docker
 - Kubernetes
 - CI/CD
-- Python (Flask)
+- Python
 - Prometheus & Grafana
 - Linux & Cloud Infrastructure
 - HTML
-- React
 - CSS
 - Tailwind
 - PHP
@@ -143,6 +142,8 @@ FACHRI'S SKILLS:
 - Automation
 - n8n
 - Jenkins
+- ReactJS
+- Javascript
 
 EXPERIENCE:
 - MSIB DevOps at NF Academy
@@ -226,7 +227,7 @@ COMMUNICATION STYLE:
       
       const model = genAI.getGenerativeModel({ 
         model: "gemini-2.5-flash",
-        systemInstruction: t.systemPrompt // Gunakan prompt sesuai bahasa
+        systemInstruction: t.systemPrompt 
       });
 
       const chatHistory = messages.length > 1 ? messages.slice(1).map(msg => ({
